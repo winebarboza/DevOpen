@@ -1,3 +1,118 @@
-h1{
-    color: rgb(208, 92, 92);
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+:root{
+  /* declarando variáveis */
+  --azul:#4d67cb; 
+  --larnja:#FF8C32;
 }
+h1{
+  font-family: roboto;
+}
+h2{
+  font-family: 'Open Sans', sans-serif;
+}
+/* barra de navegação */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: jura, -apple-system, Helvetica, Arial, sans-serif;
+    background: var(--azul);
+    /* unidade responsiva que adapta conforme a janela do usuário se movimenta */
+    height: 8vh; 
+    
+  }
+  .nav-list {
+    list-style: none; 
+    display: flex;
+   }
+   .nav-list li{
+     letter-spacing: 3px;
+     margin-left: 60px;
+   }
+ .mobile-menu{
+   display: none;
+ }
+ .mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    cursor: pointer;
+ }
+@media (max-width: 600px) {
+    body{
+      /* se algo transborda para fora da tela, não aparece no body. */
+      overflow-x: hidden;
+    }
+    .nav-list{
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 25vw;
+      height: 95vh;
+      background: var(--azul);
+      flex-direction: column;
+      align-items:center;
+      justify-content: space-around;
+      margin-top: 0%;
+      transform: translateX(100%);
+    }
+    .nav-list li{
+      margin-left: 0;
+      opacity: 0;
+    }
+   .mobile-menu{
+     display: block;
+   }
+   .nav-list.active{
+     transform: translateX(0);
+   }
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+/* conteúdo home page */
+.container{
+  
+}
+.dinamic-text{
+  color: #4d67cb;
+  
+}
+
