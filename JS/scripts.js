@@ -44,6 +44,20 @@ class MobileNavbar {
   mobileNavbar.init();
 
 
+//menu mobile
 
 
-  
+var btn = document.querySelector("#button-menu");
+
+btn.addEventListener("click", function() {
+
+    var div = document.querySelector("#hero");
+    
+  if(div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+      div.style.display = "none";
+  }
+    
+});
+// ao clicar no botão div principal desaparece ou aparece

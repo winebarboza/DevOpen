@@ -3,22 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 :root{
   /* declarando variáveis */
-  --azul:#4d67cb; 
-  --larnja:#FF8C32;
+  --azul:#2155CD; 
+  --branco: white;
+}
+header{
+  width: 100%;
+  height: 55px;
 }
 h1{
   font-family: roboto;
 }
 h2{
   font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
 }
 /* barra de navegação */
 a {
-    color: #fff;
+    color: var(--azul);
     text-decoration: none;
     transition: 0.3s;
   }
-  
+
+  @media (max-width:600px){
+    a{
+      color: white;
+  }
+ }
   a:hover {
     opacity: 0.7;
   }
@@ -27,13 +37,14 @@ a {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
+    color: var(--azul);
   }
   nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: jura, -apple-system, Helvetica, Arial, sans-serif;
-    background: var(--azul);
+    background: var(--branco);
     /* unidade responsiva que adapta conforme a janela do usuário se movimenta */
     height: 8vh; 
     
@@ -52,7 +63,7 @@ a {
  .mobile-menu div{
     width: 32px;
     height: 2px;
-    background: #fff;
+    background: var(--azul);
     margin: 8px;
     cursor: pointer;
  }
@@ -65,7 +76,7 @@ a {
       position: absolute;
       top: 8vh;
       right: 0;
-      width: 25vw;
+      width: 100vw;
       height: 95vh;
       background: var(--azul);
       flex-direction: column;
@@ -84,6 +95,14 @@ a {
    .nav-list.active{
      transform: translateX(0);
    }
+}
+@media (max-width: 600px) {
+  .hero{
+      right: 0;
+      width:100vw;
+      height: 95vh;
+      
+  }
 }
 @keyframes navLinkFade {
   from {
@@ -107,12 +126,74 @@ a {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+#button-menu{
+  border: none;
+  background-color: white;
+}
 /* conteúdo home page */
 .container{
-  
+  display: flex;
 }
-.dinamic-text{
-  color: #4d67cb;
+/* arredondamento do background */
+#hero {
+  display:block;
+  align-items: center;
+  box-sizing: border-box;
+  height: 580px;
+  background-color: var(--azul);
+  clip-path: ellipse(138% 100% at 5.12% 0%);
+  }
+/* botão principal */
+.bottom-contacts{
+  background-color: var(--branco);
+  width: 180px;
+  height: 50px;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(255, 255, 255, 0.452);
+  border-radius: 50px;
+  font-family:'Sarala', sans-serif;
+  font-size: 20px;
+  color: var(--azul);
+}
+.bottom-contacts:hover{
+  background-color: rgb(160, 195, 255);
+  color: var(rgb(82, 82, 233));
+  width: 185px;
+  height: 60px;
+  transition-duration: 0.1s;
+}
+@media (max-width: 600px) {
+  .bottom-contacts{
+    width: 180px;
+    height:30px;
+}
+  .bottom-contacts:hover{
+    width: 181px;
+    height: 35px;
+  }
+}
+.content h1{
+  color: white;
+}
+.content p{
+  font-size: 25px;
+  color: white;
+}
+.content{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 9%;
+ 
+}
+#image{
+  width:580px;
+  height:580px;
   
 }
 
+
+/* Seção 1 SOBRE A EMPRESA*/
+#about-us h1, p{
+  color: var(--azul);
+}

@@ -14,19 +14,21 @@
     <title>DevOpen - Criamos seu site do zero!</title>
     <style>
       body{
-        background-color: aliceblue;
+        background-color: white;
       }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a class="logo" href="/">DevOpen</a>
-            <div class="mobile-menu">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
+            <div class="logo" href="/">DevOpen</div>
+           <button id="button-menu">
+              <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+             </div>
+          </button>
             <ul class="nav-list">
               <li><a href="#">Início</a></li>
               <li><a href="#">Sobre</a></li>
@@ -36,15 +38,21 @@
           </nav>
     </header>  
     <main>
-          <div class="card">
-            <h1>Construímos seu site do zero</h1>
-            <h2 class="dinamic-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magnam doloribus vero,<br>
-               qui odit, iure voluptatum laboriosam, sequi officia repudiandae voluptatibus delectus <br>
-                distinctio quos aliquam? Voluptatem autem ea tenetur a?</h2>
-            <button></button>
+      <div id="hero">
+          <div class="content">
+            <div>
+              <h1>Nós fazemos o site para o seu negócio!</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, <br> v
+              elit, voluptatibus fugiat nulla doloremque magni quo voluptatem <br>
+              earum voluptates animi culpa quia temporibus quam. Exercitationem. </p>
+            <button class="bottom-contacts">Entre em contato</button>
+            </div>
+            <div id="image">
+              <img src="images/sales-team.svg" alt="">
           </div>
+      </div>
     </main>
     <script src="JS/scripts.js"></script>
-    
+   
 </body>
 </html>
