@@ -60,4 +60,25 @@ btn.addEventListener("click", function() {
   }
     
 });
+
+// Ficar ouvindo quando a tela mudar de tamanho
+// Toda vez que a tela mudar de tamanho
+// Verificar o display da div menu
+// Se o tamanho não de mobile, eu vou deixar a divi ficar visível novamente
+
+window.addEventListener("resize", () =>{
+  var div = document.querySelector("#hero");
+  const width = document.documentElement.clientWidth;  
+  // Display result inside a div element 
+
+  if(width > 600){
+    if(div.style.display === "none") {
+      div.style.display = "block";
+     } 
+  }else{
+    if(div.style.display === "block") {
+      div.style.display = "none";
+     }
+  }
+});
 // ao clicar no botão div principal desaparece ou aparece
